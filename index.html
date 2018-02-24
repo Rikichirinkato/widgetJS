@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style/index.css" rel="stylesheet">
+    <script async src="js/index.js"></script>
+    <title>Widget</title>
+</head>
+<body>
+    <article class="app">
+        <input type="checkbox" id="open">
+        <section class="head">
+            <h1>Expenses</h1>
+            <label class="open-btn" for="open">
+                <div id="left"></div>
+                <div id="right"></div>
+            </label>
+        </section>
+        <div class="info">
+            <div class="info-headers">
+                <p>
+                    <span>Name</span>
+                    <button type="button" id="sort">↓</button>
+                </p>
+                <p>Amount</p>
+            </div>
+            <div class="list">
+                
+            </div>
+            <form>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="number" name="amount" id="amount" placeholder="$$.¢¢">
+                <button type="button" id="adding">+</button>
+            </form>
+        </div>
+        <div class="total">
+            <span>Total</span><span id="result"></span>
+        </div>
+    </article>
+</body>
+</html>
