@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
 }
 #open{
     display: none;
@@ -22,6 +23,10 @@
 }
 h1{
     color: #3192af;
+}
+.title-editor{
+    display: none;
+    margin-left:3px;
 }
 .open-btn{
     width: 25px;
@@ -111,12 +116,14 @@ form{
     border-top:  1px solid #3192af;
     background-color: #a7c3ef;
 }
-form input{
+input{
+    width:40%;
+    max-width: 165px;
     padding: 2px;
     border-radius: 3px;
     border: 1px solid #3192af;
 }
-#adding, #sort{
+button{
     width: 20px;
     height: 20px;
     border-radius: 3px;

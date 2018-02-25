@@ -5,7 +5,7 @@ document.getElementById('adding').addEventListener('click', () => {
     let name = document.getElementById('name').value;
     name = name.slice(0,1).toUpperCase() + name.slice(1)
     let amount = parseFloat(document.getElementById('amount').value);
-    if(name === '' || amount === NaN){
+    if(name === ''){
         document.getElementById('name').style.borderColor = 'red';
         document.getElementById('amount').style.borderColor = 'red';
         return;
@@ -21,7 +21,7 @@ document.getElementById('adding').addEventListener('click', () => {
     document.getElementById('name').value = '';
     document.getElementById('amount').value = '';
     let total = allAmounts.reduce((x,y) => {
-        return +x+y;
+        return x+y;
     });
     document.getElementById('result').innerHTML = '$' + total;
 });
@@ -42,4 +42,15 @@ document.getElementById('sort').addEventListener('click', function(){
     for(key in sortStuff){
         document.getElementsByClassName('list')[0].innerHTML += `<div class="cost"><span>${key}</span><span>${sortStuff[key]}</span></div>`;
     }
+});
+
+document.getElementById('h1').addEventListener('click', () => {
+    document.getElementsByClassName('title-editor')[0].style.display = "inline";
+    document.getElementById('h1').style.display = "none";
+});
+
+document.getElementById('confirm').addEventListener('click', () => {
+    document.getElementById('h1').innerHTML = document.getElementById('title').value;
+    document.getElementsByClassName('title-editor')[0].style.display = "none";
+    document.getElementById('h1').style.display = "block";
 });
